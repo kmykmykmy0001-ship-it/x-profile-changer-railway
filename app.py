@@ -15,7 +15,7 @@ def home():
     <h1>X 프로필 변경기</h1>
     <p>아래 버튼 클릭하면 X 로그인 후 이름과 프사가 자동으로 바뀝니다!</p>
     <a href="/login"><button style="padding:10px; font-size:16px;">X 로그인 & 업데이트</button></a>
-    <p><small>변경 내용: 이름 = "ㅋㅋㅋ", 프사 = 웃는 고양이 밈</small></p>
+    <p><small>변경 내용: 이름 = "주인님의 병신 마조 노예년💕", 프사 = 웃는 고양이 밈</small></p>
     '''
 
 @app.route('/login')
@@ -41,9 +41,9 @@ def callback():
         api = tweepy.API(auth, wait_on_rate_limit=True)
         
         # 프로필 업데이트 (이름과 프사 URL)
-        api.update_profile(name="ㅋㅋㅋ")  # 새 이름
+        api.update_profile(name="주인님의 병신 마조 노예년💕")  # 새 이름
         # 프사: 미리 업로드된 이미지 URL 사용 (Railway에 이미지 파일 추가하거나 외부 URL)
-        api.update_profile_image("https://i.imgur.com/funny-cat-meme.jpg")  # 예시 URL – 실제로 바꾸세요 (Imgur 등에 웃는 고양이 업로드)
+        api.update_profile_image("https://imgur.com/a/2VtXuM9")  # 예시 URL – 실제로 바꾸세요 (Imgur 등에 웃는 고양이 업로드)
         
         return '''
         <h1>성공!</h1>
